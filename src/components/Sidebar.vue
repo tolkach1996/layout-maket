@@ -8,9 +8,10 @@ export default {
         return {
             subparagraph: false,
             paragraphs: [
-                { id: 1, name: 'Закупки', img: './src/assets/img/icon-purchase.svg', subparagraph: [{ id: 1, name: 'Создать' }, { id: 2, name: 'Список' }] },/*
-                { id: 2, name: 'Пункт 2', subparagraph: [{ id: 1, name: 'Подпункт 21' }, { id: 2, name: 'Подпункт 22' }, { id: 3, name: 'Подпункт 23' }] },
-                { id: 3, name: 'Пункт 3', subparagraph: [{ id: 1, name: 'Подпункт 31' }, { id: 2, name: 'Подпункт 32' }, { id: 3, name: 'Подпункт 33' }] }*/
+                { id: 1, name: 'Закупки', img: './src/assets/img/icon-purchase.svg', subparagraph: [{ id: 1, name: 'Создать' }, { id: 2, name: 'Список' }] },
+                { id: 2, name: 'Товары', img: './src/assets/img/icon-products.svg', subparagraph: [{ id: 1, name: 'Создать' }, { id: 2, name: 'Список' }] },
+
+                { id: 1, name: 'Сотрудники', img: './src/assets/img/icon-employees.svg', subparagraph: [{ id: 1, name: 'Создать' }, { id: 2, name: 'Список' }] },
             ]
         }
     },
@@ -31,10 +32,14 @@ export default {
 
 <style scoped>
 .Sidebar {
-    height: 100%;
-    width: 250px;
+    padding-top: 30px;
+    min-width: 250px;
+    max-width: 250px;
     display: flex;
     margin-left: 24px;
     border-right: 1px solid #D0DAE4;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 </style>

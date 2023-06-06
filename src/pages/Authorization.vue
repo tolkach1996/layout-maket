@@ -7,13 +7,28 @@
         <div class="authorization-content">
             <div class="authorization__title">Вход в личный кабинет</div>
             <div class="authorization__info">Введите данные для входа в личный кабинет администратора</div>
-            <div class="authorization-login">
-                <div class="authorization-login-content">
+            <form action="" class="authorization-login">
+                <input id="authorization-input-number" class="authorization__pass" type="text" v-phone placeholder=" ">
+                <label for="authorization-input-number" class="placeholder">Введите номер телефона</label>
+                <input type="password" id="authorization-input-pass" class="authorization__pass" placeholder=" ">
+                <label for="authorization-input-pass" class="placeholder">Пароль</label>
+            </form>
+
+
+
+
+
+            <!--
+    <div class="authorization-login">
+<div class="authorization-login-content">
                     <span>Введите номер телефона</span>
-                    <input class="authorization-login-content__input" type="text" v-phone placeholder="+7 900 123-45-67">
+                    <input id="authorization-input-number" class="authorization-login-content__input" type="text" v-phone
+                        placeholder=" ">
+                    <label for="authorization-input-number">Введите номер телефона</label>
                 </div>
-            </div>
-            <input type="password" class="authorization__pass" placeholder="Пароль">
+</div>
+            <input type="password" class="authorization__pass" placeholder="Пароль">-->
+
             <button class="authorization__button">Войти в кабинет</button>
         </div>
     </div>
@@ -60,10 +75,8 @@
 
 .authorization-login {
     width: 100%;
-    border: 0.75px solid #9E9E9E;
     border-radius: 3px;
     margin-bottom: 15px;
-
 }
 
 .authorization-login-content {
@@ -81,6 +94,7 @@
 .authorization-login-content__input {
     font-size: 14px;
     line-height: 18px;
+    border: none;
 }
 
 .authorization__pass {
@@ -93,11 +107,56 @@
     padding: 15px 20px;
 }
 
+.placeholder {
+    color: #65657b;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+}
+
+.authorization__pass:focus~.label,
+/* фокус на input */
+.authorization__pass:not(:placeholder-shown)~.label
+
+/* в input есть значение */
+    {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.authorization__pass:hover {
+    background-color: #E2EAF1;
+}
+
+.authorization__pass:focus {
+    background: #FFFFFF;
+    border: 1px solid #9E9E9E;
+}
+
 .authorization__button {
     width: 100%;
     height: 55px;
     background: #126CF3;
     color: white;
     border-radius: 5px;
+}
+
+
+
+
+
+.authorization__pass:focus~.placeholder,
+.authorization__pass:not(:placeholder-shown)~.placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.authorization__pass:not(:placeholder-shown)~.placeholder {
+    color: #808097;
+}
+
+.authorization__pass:focus~.placeholder {
+    color: #dc2f55;
 }
 </style>

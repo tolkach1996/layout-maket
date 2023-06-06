@@ -13,7 +13,7 @@ export default {
         <Header></Header>
         <div class="content">
             <Sidebar></Sidebar>
-            <div class="content-main">12345</div>
+            <router-view />
         </div>
     </div>
 </template>

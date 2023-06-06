@@ -18,7 +18,7 @@
 
 <style scoped>
 .Header {
-    background-color: #E5E5EA;
+
     width: 100%;
     height: 70px;
     display: flex;
