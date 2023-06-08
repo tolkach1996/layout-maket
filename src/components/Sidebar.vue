@@ -41,5 +41,6 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    min-height: 100%;
 }
 </style>

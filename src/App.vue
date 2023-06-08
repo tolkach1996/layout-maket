@@ -3,9 +3,11 @@
 </script>
 
 <template>
-    <div class="App">
-        <router-view />
-    </div>
+    <router-view />
 </template>
 
-<style scoped></style>
+<style scoped>
+.App {
+    min-height: 100%;
+}
+</style>

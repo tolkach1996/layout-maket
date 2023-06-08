@@ -1,9 +1,10 @@
 <script>
 import Header from "../components/Header.vue"
 import Sidebar from "../components/Sidebar.vue"
+import Order from "../components/order.vue"
 
 export default {
-    components: { Header, Sidebar }
+    components: { Header, Sidebar, Order }
 }
 
 </script>
@@ -18,28 +19,31 @@ export default {
                     <div class="PurchaseList-page__title">Текущие закупки</div>
                     <div class="PurchaseList-page-navigation">
                         <span class="PurchaseList-page-navigation__title">Закупки</span><span
-                            class="PurchaseList-page-navigation__subtitle">/ Текущие закупки</span>
+                            class="PurchaseList-page-navigation__subtitle"> / Текущие закупки</span>
                     </div>
                 </div>
                 <div class="PurchaseList-page-action">
-                    <button class="PurchaseList-page-action__button">Добавить новую закупку</button>
+                    <button class="PurchaseList-page-action__button"><img src="../assets/img/icon-plus-circle.svg"
+                            alt="">Добавить новую закупку</button>
                     <select name="" id="" class="PurchaseList-page-action-select">
                         <option value="">Опция фильтра 1</option>
                         <option value="">Опция фильтра 2</option>
                     </select>
                 </div>
-                <div class="PurchaseList-page-purchases">
-                    закупки
-                </div>
+                <Order></Order>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped>
+.PurchaseList {
+    min-height: 100%;
+}
+
 .content {
     display: flex;
-
+    min-height: 100%;
 }
 
 .PurchaseList-page {
@@ -95,6 +99,9 @@ export default {
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .PurchaseList-page-action-select {
